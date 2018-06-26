@@ -1,27 +1,27 @@
-var soda = ["Mountain Dew", 
+var sodas = ["Mountain Dew", 
             "Pepsi", 
             "Coke", 
             "Diet Coke",
             "Sprite",
             "Dr. Pepper",
             "7up",
-            "fanta",
+            "Fanta Orange",
             "Root Beer",
             "Diet Pepsi",
-            "Mellow Yellow"];
+            "diet dr. pepper"];
 
       // Function for displaying data
 function renderButtons() {
 
   $(".button-display").empty();
 
-  for (var i = 0; i < soda.length; i++) {
+  for (var i = 0; i < sodas.length; i++) {
     var a = $("<button>");
     a.addClass("clicker btn btn-primary");
-    a.attr("data-name", soda[i]);
-    a.text(soda[i]);
+    a.attr("data-name", sodas[i]);
+    a.text(sodas[i]);
     $(".button-display").append(a);
-    console.log('soda array =' + soda + '-');
+    console.log('soda array =' + sodas + '-');
   }
 }
 
