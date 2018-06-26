@@ -21,7 +21,6 @@ function renderButtons() {
     a.attr("data-name", sodas[i]);
     a.text(sodas[i]);
     $(".button-display").append(a);
-    console.log('soda array =' + sodas + '-');
   }
 }
 
@@ -36,7 +35,6 @@ $("body").on("click", '#add-soda', function(event) {
   }
   else {
     sodas.push(soda);
-    console.log('soda array =' + sodas + '-');
     $("#soda-input").val('')
     renderButtons();
   }
@@ -45,11 +43,10 @@ $("body").on("click", '#add-soda', function(event) {
 $("body").on("click", '.clicker', function() {
   
   var soda = $(this).attr("data-name");
-  console.log("data-name -" + soda + "-");
+
 
   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
     soda+ "&api_key=Z7BB3rk9yCoL08yOtp8MnH0JzSrD515L&limit=10";
-  console.log("query -" + queryURL + "-");
 
   $.ajax({
       url: queryURL,
@@ -57,8 +54,7 @@ $("body").on("click", '.clicker', function() {
     })
     .done(function(response) {
 
-      var results = response.data;
-      console.log(response);
+      var results = response.data;  
       $('#images').empty();
 
       for (var i = 0; i < results.length; i++) {
