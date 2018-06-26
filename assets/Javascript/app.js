@@ -10,7 +10,7 @@ var sodas = ["Mountain Dew",
             "Diet Pepsi",
             "diet dr. pepper"];
 
-      // Function for displaying data
+
 function renderButtons() {
 
   $(".button-display").empty();
@@ -66,9 +66,7 @@ $("body").on("click", '.clicker', function() {
         var rating = results[i].rating;
         var p = $('<p>')
           .append('<span class="label label-lg label-info">Rating: <span class="badge">' + rating + '</span></span>');
-//         <button class="btn btn-primary" type="button">
-//   Messages <span class="badge">4</span>
-// </button>
+//
 
         var sodaImage = $("<img class='img-thumbnail'>");
         var sodaUrl = results[i].images.fixed_height.url;
