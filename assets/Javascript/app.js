@@ -44,7 +44,6 @@ $("body").on("click", '.clicker', function() {
   
   var soda = $(this).attr("data-name");
 
-
   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
     soda+ "&api_key=Z7BB3rk9yCoL08yOtp8MnH0JzSrD515L&limit=10";
 
